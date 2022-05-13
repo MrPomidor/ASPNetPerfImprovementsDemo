@@ -1,0 +1,14 @@
+services:
+  redis:
+    image: redis:6.2.6-alpine
+    ports:
+    - "6379:6379"
+  
+  mssql_adventureworks:
+    image: chriseaton/adventureworks:light
+    ports:
+    - "1433:1433"
+    environment:
+    - "ACCEPT_EULA=Y"
+    - "SA_PASSWORD=hello_world"
+    - "MSSQL_PID=Developer"
