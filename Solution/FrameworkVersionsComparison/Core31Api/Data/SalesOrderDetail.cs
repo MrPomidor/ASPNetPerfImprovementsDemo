@@ -7,12 +7,10 @@ namespace Core31Api.Data
     [Table("SalesOrderDetail", Schema = "Sales")]
     public partial class SalesOrderDetail
     {
-        //[Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int SalesOrderID { get; set; }
 
-        //[Key]
         [Column(Order = 1)]
         public int SalesOrderDetailID { get; set; }
 

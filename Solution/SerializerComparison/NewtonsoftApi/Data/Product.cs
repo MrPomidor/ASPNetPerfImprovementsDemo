@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Net6Api.Data
+namespace NewtonsoftApi.Data
 {
     [Table("Product", Schema = "Production")]
     public partial class Product
