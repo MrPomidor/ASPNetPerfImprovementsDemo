@@ -30,13 +30,13 @@ var getProductsPageStep = Step.Create("getProductsPage", clientFactory, productP
 var ordersScenario = ScenarioBuilder.CreateScenario("Orders", getOrdersPageStep)
     .WithWarmUpDuration(TimeSpan.FromSeconds(10))
     .WithLoadSimulations(
-        LoadSimulation.NewInjectPerSec(_rate: 15, _during: TimeSpan.FromMinutes(3))
+        LoadSimulation.NewKeepConstant(_copies: 7, _during: TimeSpan.FromMinutes(3))
     );
 
 var productsScenario = ScenarioBuilder.CreateScenario("Products", getProductsPageStep)
     .WithWarmUpDuration(TimeSpan.FromSeconds(10))
     .WithLoadSimulations(
-        LoadSimulation.NewInjectPerSec(_rate: 15, _during: TimeSpan.FromMinutes(3))
+        LoadSimulation.NewKeepConstant(_copies: 7, _during: TimeSpan.FromMinutes(3))
     );
 
 NBomberRunner
