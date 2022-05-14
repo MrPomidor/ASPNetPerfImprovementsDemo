@@ -1,7 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace NewtonsoftApi.Data
+namespace Reusables.Data
 {
     [Table("SalesOrderHeader", Schema = "Sales")]
     public partial class SalesOrderHeader

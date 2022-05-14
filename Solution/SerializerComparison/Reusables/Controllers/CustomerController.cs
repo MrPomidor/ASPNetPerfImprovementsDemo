@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using NewtonsoftApi.Data;
+using Reusables.Data;
 
-namespace NewtonsoftApi.Controllers
+namespace Reusables.Controllers
 {
     [Route("/customer")]
     public class CustomerController : Controller
@@ -22,7 +22,7 @@ namespace NewtonsoftApi.Controllers
         }
 
         [HttpGet("orders/{id:int}")]
-        public async Task<IActionResult> GetOrder([FromRoute]int id)
+        public async Task<IActionResult> GetOrder([FromRoute] int id)
         {
             var order = await _dbContext.SalesOrderHeaders.AsQueryable().AsNoTracking()
                 .Include(x => x.SalesOrderDetails)

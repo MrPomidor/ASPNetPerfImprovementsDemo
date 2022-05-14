@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Reusables.Data;
 
-namespace NewtonsoftApi
+namespace SystemTextJsonApi
 {
     public class Program
     {
@@ -10,9 +10,9 @@ namespace NewtonsoftApi
             var builder = WebApplication.CreateBuilder(args);
             builder.Services
                 .AddControllers()
-                .AddNewtonsoftJson(options =>
-                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-                );
+                .AddJsonOptions(options =>
+                    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles
+                    );
 
             builder.Services.AddDbContext<AdventureWorks>((config) =>
             {
