@@ -13,7 +13,6 @@ namespace Reusables.Data
         {
         }
 
-        public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<SalesOrderDetail> SalesOrderDetails { get; set; }
         public virtual DbSet<SalesOrderHeader> SalesOrderHeaders { get; set; }
 

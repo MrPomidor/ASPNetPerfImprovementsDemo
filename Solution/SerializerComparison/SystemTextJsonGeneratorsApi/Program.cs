@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Reusables.Data;
-using SystemTextJsonGeneratorsApi.JsonSerializerContexts;
+using SystemTextJsonGeneratorsApi.JsonConverters;
 
 namespace SystemTextJsonGeneratorsApi
 {
@@ -12,9 +12,9 @@ namespace SystemTextJsonGeneratorsApi
             builder.Services
                 .AddControllers()
                 .AddJsonOptions(options => {
-                    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
-
-                    options.JsonSerializerOptions.AddContext<AdventureWorksContext>();
+                    AdventureWorksContext.Init();
+                    options.JsonSerializerOptions.Converters.Add(new SalesOrderHeaderConverter());
+                    options.JsonSerializerOptions.Converters.Add(new SalesOrderHeaderListConverter());
                 });
 
             builder.Services.AddDbContext<AdventureWorks>((config) =>

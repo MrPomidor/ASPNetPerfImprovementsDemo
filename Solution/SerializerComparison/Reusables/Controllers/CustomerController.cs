@@ -13,8 +13,16 @@ namespace Reusables.Controllers
             _dbContext = dbContext;
         }
 
-        [HttpGet("orders/ids")]
+        [HttpGet("orders/count")]
         public async Task<IActionResult> GetOrdersCount()
+        {
+            var ordersCount = await _dbContext.SalesOrderHeaders.AsQueryable().AsNoTracking()
+                .CountAsync();
+            return Ok(ordersCount);
+        }
+
+        [HttpGet("orders/ids")]
+        public async Task<IActionResult> GetOrderIds()
         {
             var orderIds = await _dbContext.SalesOrderHeaders.AsQueryable().AsNoTracking()
                 .Select(x => x.SalesOrderID).ToArrayAsync();
@@ -22,28 +30,24 @@ namespace Reusables.Controllers
         }
 
         [HttpGet("orders/{id:int}")]
-        public async Task<IActionResult> GetOrder([FromRoute] int id)
+        public async Task<SalesOrderHeader> GetOrder([FromRoute] int id)
         {
             var order = await _dbContext.SalesOrderHeaders.AsQueryable().AsNoTracking()
                 .Include(x => x.SalesOrderDetails)
                 .FirstOrDefaultAsync(x => x.SalesOrderID == id);
-            return Ok(order);
+            return order;
         }
 
-        [HttpGet("products/ids")]
-        public async Task<IActionResult> GetProductsCount()
+        [HttpGet("orders")]
+        public async Task<List<SalesOrderHeader>> GetOrders(int pageNumber = 1, int pageSize = 100)
         {
-            var productIds = await _dbContext.Products.AsQueryable().AsNoTracking()
-                .Select(x => x.ProductID).ToArrayAsync();
-            return Ok(productIds);
-        }
-
-        [HttpGet("products/{id:int}")]
-        public async Task<IActionResult> GetProduct([FromRoute] int id)
-        {
-            var product = await _dbContext.Products.AsQueryable().AsNoTracking()
-                .FirstOrDefaultAsync(x => x.ProductID == id);
-            return Ok(product);
+            var orders = await _dbContext.SalesOrderHeaders.AsQueryable().AsNoTracking()
+                .Include(x => x.SalesOrderDetails)
+                .OrderBy(x => x.SalesOrderID)
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+            return orders;
         }
     }
 }
