@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkApi", "FrameworkVe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core31Api", "FrameworkVersionsComparison\Core31Api\Core31Api.csproj", "{264E7A4C-1847-4C5D-BD09-CFA18C86B49B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net6Api", "FrameworkVersionsComparison\Net6Api\Net6Api.csproj", "{29B6349D-C30C-46FC-8676-360FF1276DCB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,6 +31,10 @@ Global
 		{264E7A4C-1847-4C5D-BD09-CFA18C86B49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{264E7A4C-1847-4C5D-BD09-CFA18C86B49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{264E7A4C-1847-4C5D-BD09-CFA18C86B49B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29B6349D-C30C-46FC-8676-360FF1276DCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29B6349D-C30C-46FC-8676-360FF1276DCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29B6349D-C30C-46FC-8676-360FF1276DCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29B6349D-C30C-46FC-8676-360FF1276DCB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 		{4A2F87DC-8724-436C-8DA8-68CF2220A8AF} = {E8435C62-89CB-446D-A1B7-C25585661EE1}
 		{61A25CFF-F0FB-42B0-8614-BC38F68396BB} = {E8435C62-89CB-446D-A1B7-C25585661EE1}
 		{264E7A4C-1847-4C5D-BD09-CFA18C86B49B} = {E8435C62-89CB-446D-A1B7-C25585661EE1}
+		{29B6349D-C30C-46FC-8676-360FF1276DCB} = {E8435C62-89CB-446D-A1B7-C25585661EE1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83EB3E68-DA05-4269-B585-FC49FE124614}
