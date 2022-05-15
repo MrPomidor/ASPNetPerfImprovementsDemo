@@ -30,16 +30,23 @@ namespace Reusables.Controllers
         }
 
         [HttpGet("orders/{id:int}")]
-        public async Task<SalesOrderHeader> GetOrder([FromRoute] int id)
+        public async Task<IActionResult> GetOrder([FromRoute] int id)
         {
             var order = await _dbContext.SalesOrderHeaders.AsQueryable().AsNoTracking()
                 .Include(x => x.SalesOrderDetails)
                 .FirstOrDefaultAsync(x => x.SalesOrderID == id);
-            return order;
+
+            // hack to make code with source generators work without cyclic references, as code generators does not support it for now
+            for (int j = 0; j < order.SalesOrderDetails.Count; j++)
+            {
+                var orderDetailsItem = order.SalesOrderDetails[j];
+                orderDetailsItem.SalesOrderHeader = null;
+            }
+            return Ok(order);
         }
 
         [HttpGet("orders")]
-        public async Task<List<SalesOrderHeader>> GetOrders(int pageNumber = 1, int pageSize = 100)
+        public async Task<IActionResult> GetOrders(int pageNumber = 1, int pageSize = 100)
         {
             var orders = await _dbContext.SalesOrderHeaders.AsQueryable().AsNoTracking()
                 .Include(x => x.SalesOrderDetails)
@@ -47,7 +54,18 @@ namespace Reusables.Controllers
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .ToListAsync();
-            return orders;
+
+            // hack to make code with source generators work without cyclic references, as code generators does not support it for now
+            for (int i = 0; i < orders.Count; i++)
+            {
+                var order = orders[i];
+                for (int j = 0; j < order.SalesOrderDetails.Count; j++)
+                {
+                    var orderDetailsItem = order.SalesOrderDetails[j];
+                    orderDetailsItem.SalesOrderHeader = null;
+                }
+            }
+            return Ok(orders);
         }
     }
 }

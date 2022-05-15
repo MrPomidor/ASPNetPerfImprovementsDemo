@@ -31,13 +31,13 @@ var getOrdersPageStep = Step.Create("getOrdersPage", clientFactory, orderPageNum
 var ordersScenario = ScenarioBuilder.CreateScenario("Orders by Id", getOrderStep)
     .WithWarmUpDuration(TimeSpan.FromSeconds(10))
     .WithLoadSimulations(
-        LoadSimulation.NewKeepConstant(_copies: 7, _during: TimeSpan.FromMinutes(3))
+        LoadSimulation.NewKeepConstant(_copies: 10, _during: TimeSpan.FromMinutes(3))
     );
 
 var ordersPageScenario = ScenarioBuilder.CreateScenario("Orders page", getOrdersPageStep)
     .WithWarmUpDuration(TimeSpan.FromSeconds(10))
     .WithLoadSimulations(
-        LoadSimulation.NewKeepConstant(_copies: 7, _during: TimeSpan.FromMinutes(3))
+        LoadSimulation.NewKeepConstant(_copies: 10, _during: TimeSpan.FromMinutes(3))
     );
 
 NBomberRunner

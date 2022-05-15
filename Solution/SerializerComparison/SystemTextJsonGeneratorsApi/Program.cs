@@ -1,3 +1,4 @@
+using System.Text.Encodings.Web;
 using Microsoft.EntityFrameworkCore;
 using Reusables.Data;
 using SystemTextJsonGeneratorsApi.JsonConverters;
@@ -12,9 +13,8 @@ namespace SystemTextJsonGeneratorsApi
             builder.Services
                 .AddControllers()
                 .AddJsonOptions(options => {
-                    AdventureWorksContext.Init();
-                    options.JsonSerializerOptions.Converters.Add(new SalesOrderHeaderConverter());
-                    options.JsonSerializerOptions.Converters.Add(new SalesOrderHeaderListConverter());
+                    options.JsonSerializerOptions.Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping;
+                    options.JsonSerializerOptions.AddContext<AdventureWorksContext>();
                 });
 
             builder.Services.AddDbContext<AdventureWorks>((config) =>

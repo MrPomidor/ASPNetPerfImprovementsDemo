@@ -9,7 +9,7 @@ namespace Reusables.Data
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SalesOrderHeader()
         {
-            SalesOrderDetails = new HashSet<SalesOrderDetail>();
+            SalesOrderDetails = new List<SalesOrderDetail>();
         }
 
         [Key]
@@ -78,6 +78,6 @@ namespace Reusables.Data
         public DateTime ModifiedDate { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SalesOrderDetail> SalesOrderDetails { get; set; }
+        public virtual List<SalesOrderDetail> SalesOrderDetails { get; set; }
     }
 }
