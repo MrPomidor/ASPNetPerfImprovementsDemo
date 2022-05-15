@@ -8,7 +8,7 @@ const string baseUrl = "https://localhost:44327/customer";
 
 using var httpClient = new HttpClient();
 
-
+// TODO move to some common code
 var orderPageNumbersFeed = await GetOrdersPageNumberFeed(httpClient);
 var productPageNumbersFeed = await GetProductsPageNumberFeed(httpClient);
 

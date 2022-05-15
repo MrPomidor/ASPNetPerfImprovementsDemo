@@ -5,7 +5,7 @@ using Serilog;
 using Newtonsoft.Json;
 
 const int pageSize = 100;
-const string baseUrl = "https://localhost:44390/customer";
+const string baseUrl = "https://localhost:44398/customer";
 
 using var httpClient = new HttpClient();
 
@@ -34,14 +34,14 @@ var ordersScenario = ScenarioBuilder.CreateScenario("Orders by Id", getOrderStep
         LoadSimulation.NewKeepConstant(_copies: 10, _during: TimeSpan.FromMinutes(3))
     );
 
-var ordersPageScenario = ScenarioBuilder.CreateScenario("Orders page", getOrdersPageStep)
-    .WithWarmUpDuration(TimeSpan.FromSeconds(10))
-    .WithLoadSimulations(
-        LoadSimulation.NewKeepConstant(_copies: 10, _during: TimeSpan.FromMinutes(3))
-    );
+//var ordersPageScenario = ScenarioBuilder.CreateScenario("Orders page", getOrdersPageStep)
+//    .WithWarmUpDuration(TimeSpan.FromSeconds(10))
+//    .WithLoadSimulations(
+//        LoadSimulation.NewKeepConstant(_copies: 5, _during: TimeSpan.FromMinutes(3))
+//    );
 
 NBomberRunner
-    .RegisterScenarios(ordersScenario, ordersPageScenario)
+    .RegisterScenarios(ordersScenario) // ordersPageScenario
     .WithReportFormats(ReportFormat.Html, ReportFormat.Md)
     .Run();
 
