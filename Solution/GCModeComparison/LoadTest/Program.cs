@@ -11,11 +11,10 @@ using var httpClient = new HttpClient();
 
 // TODO move to some common code
 var orderIdsFeed = await GetOrderIdsFeed(httpClient);
-var orderPageNumbersFeed = await GetOrdersPageNumberFeed(httpClient);
 
 var clientFactory = ClientFactory.Create(
     name: "http_factory",
-    clientCount: 30,
+    clientCount: 100,
     initClient: (number, context) => Task.FromResult(new HttpClient()));
 
 var getOrderStep = Step.Create("getOrder", clientFactory, orderIdsFeed, (context) =>
@@ -23,25 +22,14 @@ var getOrderStep = Step.Create("getOrder", clientFactory, orderIdsFeed, (context
     return GetResourse(context.Client, "orders", id: context.FeedItem, context.Logger);
 });
 
-var getOrdersPageStep = Step.Create("getOrdersPage", clientFactory, orderPageNumbersFeed, (context) =>
-{
-    return GetResoursePage(context.Client, "orders", pageNumber: context.FeedItem);
-});
-
 var ordersScenario = ScenarioBuilder.CreateScenario("Orders by Id", getOrderStep)
     .WithWarmUpDuration(TimeSpan.FromSeconds(10))
     .WithLoadSimulations(
-        LoadSimulation.NewKeepConstant(_copies: 10, _during: TimeSpan.FromMinutes(3))
+        LoadSimulation.NewKeepConstant(_copies: 50, _during: TimeSpan.FromMinutes(5))
     );
 
-//var ordersPageScenario = ScenarioBuilder.CreateScenario("Orders page", getOrdersPageStep)
-//    .WithWarmUpDuration(TimeSpan.FromSeconds(10))
-//    .WithLoadSimulations(
-//        LoadSimulation.NewKeepConstant(_copies: 5, _during: TimeSpan.FromMinutes(3))
-//    );
-
 NBomberRunner
-    .RegisterScenarios(ordersScenario) // ordersPageScenario
+    .RegisterScenarios(ordersScenario)
     .WithReportFormats(ReportFormat.Html, ReportFormat.Md)
     .Run();
 
@@ -49,7 +37,7 @@ Console.WriteLine("Press any key ...");
 Console.ReadKey();
 
 
-
+// TODO move to some common code
 Task<IFeed<int>> GetOrderIdsFeed(HttpClient client)
 {
     return GetResourseIdsFeed(client, "orders", "ordersIds");

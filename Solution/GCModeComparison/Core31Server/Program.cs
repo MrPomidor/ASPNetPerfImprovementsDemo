@@ -1,3 +1,5 @@
+using System.Runtime;
+using System;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
@@ -7,6 +9,9 @@ namespace Core31Server
     {
         public static void Main(string[] args)
         {
+            var gcmodeStr = GCSettings.IsServerGC ? "Server" : "Workstation";
+            Console.WriteLine($"GC mode: {gcmodeStr}");
+
             CreateHostBuilder(args).Build().Run();
         }
 
