@@ -9,33 +9,43 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadTest", "FrameworkVersio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrameworkApi", "FrameworkVersionsComparison\FrameworkApi\FrameworkApi.csproj", "{61A25CFF-F0FB-42B0-8614-BC38F68396BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core31Api", "FrameworkVersionsComparison\Core31Api\Core31Api.csproj", "{264E7A4C-1847-4C5D-BD09-CFA18C86B49B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core31Api", "FrameworkVersionsComparison\Core31Api\Core31Api.csproj", "{264E7A4C-1847-4C5D-BD09-CFA18C86B49B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Net6Api", "FrameworkVersionsComparison\Net6Api\Net6Api.csproj", "{29B6349D-C30C-46FC-8676-360FF1276DCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net6Api", "FrameworkVersionsComparison\Net6Api\Net6Api.csproj", "{29B6349D-C30C-46FC-8676-360FF1276DCB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SerializerComparison", "SerializerComparison", "{1FE52AD1-6345-4126-98ED-28CFCDDC616B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewtonsoftApi", "SerializerComparison\NewtonsoftApi\NewtonsoftApi.csproj", "{E350E1DC-1DE4-4D7A-AB4C-AC3CA8F260C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NewtonsoftApi", "SerializerComparison\NewtonsoftApi\NewtonsoftApi.csproj", "{E350E1DC-1DE4-4D7A-AB4C-AC3CA8F260C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadTest", "SerializerComparison\LoadTest\LoadTest.csproj", "{192A93FB-137A-4361-8BD6-77EDF96B779B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadTest", "SerializerComparison\LoadTest\LoadTest.csproj", "{192A93FB-137A-4361-8BD6-77EDF96B779B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reusables", "SerializerComparison\Reusables\Reusables.csproj", "{AA514CBC-B2C2-44C8-A1AD-128660E97297}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reusables", "SerializerComparison\Reusables\Reusables.csproj", "{AA514CBC-B2C2-44C8-A1AD-128660E97297}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemTextJsonApi", "SerializerComparison\SystemTextJsonApi\SystemTextJsonApi.csproj", "{9FE4018F-2795-49FB-AE65-12842B796A40}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemTextJsonApi", "SerializerComparison\SystemTextJsonApi\SystemTextJsonApi.csproj", "{9FE4018F-2795-49FB-AE65-12842B796A40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemTextJsonGeneratorsApi", "SerializerComparison\SystemTextJsonGeneratorsApi\SystemTextJsonGeneratorsApi.csproj", "{9F1E7F7B-D163-430C-9B06-828B48EC6F94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemTextJsonGeneratorsApi", "SerializerComparison\SystemTextJsonGeneratorsApi\SystemTextJsonGeneratorsApi.csproj", "{9F1E7F7B-D163-430C-9B06-828B48EC6F94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemTextJsonGeneratorsApi.Benchmarks", "SerializerComparison\SystemTextJsonGeneratorsApi.Benchmarks\SystemTextJsonGeneratorsApi.Benchmarks.csproj", "{AB0B8AAD-CF73-4DEE-844D-B557B08F17A4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SystemTextJsonGeneratorsApi.Benchmarks", "SerializerComparison\SystemTextJsonGeneratorsApi.Benchmarks\SystemTextJsonGeneratorsApi.Benchmarks.csproj", "{AB0B8AAD-CF73-4DEE-844D-B557B08F17A4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GCModeComparison", "GCModeComparison", "{84986AB7-18EE-4DBE-A117-9684D0C89410}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadTest", "GCModeComparison\LoadTest\LoadTest.csproj", "{7A99ADD3-2F0D-4005-B312-D6D367853A43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoadTest", "GCModeComparison\LoadTest\LoadTest.csproj", "{7A99ADD3-2F0D-4005-B312-D6D367853A43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core31Default", "GCModeComparison\Core31Default\Core31Default.csproj", "{3D39189A-3F32-4E70-BA5D-0CCBF6D78E78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reusables", "GCModeComparison\Reusables\Reusables.csproj", "{A4E4B951-C9FC-41A1-AA0D-37476D7B1F8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core31Server", "GCModeComparison\Core31Server\Core31Server.csproj", "{D7C68411-A15E-4F1F-813A-2110F04F1B03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GCWorkstataion", "GCModeComparison\Core6Default\GCWorkstataion.csproj", "{8C1E7D1D-338B-43D7-93D0-5B6376810C56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reusables", "GCModeComparison\Reusables\Reusables.csproj", "{A4E4B951-C9FC-41A1-AA0D-37476D7B1F8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GCServer", "GCModeComparison\Core6Server\GCServer.csproj", "{9DA175E3-A1AB-45DB-AF8D-2A4AB2D1EAC2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SyncAsyncComparison", "SyncAsyncComparison", "{7C926FF8-EE87-41D7-9C79-705C74A8E7AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reusables", "SyncAsyncComparison\Reusables\Reusables.csproj", "{F79964B2-2A6F-46A1-B77F-AB5F454D2646}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoadTest", "SyncAsyncComparison\LoadTest\LoadTest.csproj", "{4238EBEC-0818-42C2-B3DA-2DD468700D0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncApi", "SyncAsyncComparison\AsyncApi\AsyncApi.csproj", "{B25FB4C8-9AEF-4A95-8EE4-AA111ADD5997}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SyncApi", "SyncAsyncComparison\SyncApi\SyncApi.csproj", "{1723EF1E-66D7-4A43-A5E4-DCF5E1DA3C7C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,18 +97,34 @@ Global
 		{7A99ADD3-2F0D-4005-B312-D6D367853A43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A99ADD3-2F0D-4005-B312-D6D367853A43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A99ADD3-2F0D-4005-B312-D6D367853A43}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D39189A-3F32-4E70-BA5D-0CCBF6D78E78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D39189A-3F32-4E70-BA5D-0CCBF6D78E78}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D39189A-3F32-4E70-BA5D-0CCBF6D78E78}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D39189A-3F32-4E70-BA5D-0CCBF6D78E78}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D7C68411-A15E-4F1F-813A-2110F04F1B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7C68411-A15E-4F1F-813A-2110F04F1B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7C68411-A15E-4F1F-813A-2110F04F1B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7C68411-A15E-4F1F-813A-2110F04F1B03}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A4E4B951-C9FC-41A1-AA0D-37476D7B1F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A4E4B951-C9FC-41A1-AA0D-37476D7B1F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4E4B951-C9FC-41A1-AA0D-37476D7B1F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4E4B951-C9FC-41A1-AA0D-37476D7B1F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C1E7D1D-338B-43D7-93D0-5B6376810C56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C1E7D1D-338B-43D7-93D0-5B6376810C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C1E7D1D-338B-43D7-93D0-5B6376810C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C1E7D1D-338B-43D7-93D0-5B6376810C56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DA175E3-A1AB-45DB-AF8D-2A4AB2D1EAC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DA175E3-A1AB-45DB-AF8D-2A4AB2D1EAC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DA175E3-A1AB-45DB-AF8D-2A4AB2D1EAC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DA175E3-A1AB-45DB-AF8D-2A4AB2D1EAC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F79964B2-2A6F-46A1-B77F-AB5F454D2646}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F79964B2-2A6F-46A1-B77F-AB5F454D2646}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F79964B2-2A6F-46A1-B77F-AB5F454D2646}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F79964B2-2A6F-46A1-B77F-AB5F454D2646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4238EBEC-0818-42C2-B3DA-2DD468700D0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4238EBEC-0818-42C2-B3DA-2DD468700D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4238EBEC-0818-42C2-B3DA-2DD468700D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4238EBEC-0818-42C2-B3DA-2DD468700D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B25FB4C8-9AEF-4A95-8EE4-AA111ADD5997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B25FB4C8-9AEF-4A95-8EE4-AA111ADD5997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B25FB4C8-9AEF-4A95-8EE4-AA111ADD5997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B25FB4C8-9AEF-4A95-8EE4-AA111ADD5997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1723EF1E-66D7-4A43-A5E4-DCF5E1DA3C7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1723EF1E-66D7-4A43-A5E4-DCF5E1DA3C7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1723EF1E-66D7-4A43-A5E4-DCF5E1DA3C7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1723EF1E-66D7-4A43-A5E4-DCF5E1DA3C7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -115,9 +141,13 @@ Global
 		{9F1E7F7B-D163-430C-9B06-828B48EC6F94} = {1FE52AD1-6345-4126-98ED-28CFCDDC616B}
 		{AB0B8AAD-CF73-4DEE-844D-B557B08F17A4} = {1FE52AD1-6345-4126-98ED-28CFCDDC616B}
 		{7A99ADD3-2F0D-4005-B312-D6D367853A43} = {84986AB7-18EE-4DBE-A117-9684D0C89410}
-		{3D39189A-3F32-4E70-BA5D-0CCBF6D78E78} = {84986AB7-18EE-4DBE-A117-9684D0C89410}
-		{D7C68411-A15E-4F1F-813A-2110F04F1B03} = {84986AB7-18EE-4DBE-A117-9684D0C89410}
 		{A4E4B951-C9FC-41A1-AA0D-37476D7B1F8F} = {84986AB7-18EE-4DBE-A117-9684D0C89410}
+		{8C1E7D1D-338B-43D7-93D0-5B6376810C56} = {84986AB7-18EE-4DBE-A117-9684D0C89410}
+		{9DA175E3-A1AB-45DB-AF8D-2A4AB2D1EAC2} = {84986AB7-18EE-4DBE-A117-9684D0C89410}
+		{F79964B2-2A6F-46A1-B77F-AB5F454D2646} = {7C926FF8-EE87-41D7-9C79-705C74A8E7AC}
+		{4238EBEC-0818-42C2-B3DA-2DD468700D0E} = {7C926FF8-EE87-41D7-9C79-705C74A8E7AC}
+		{B25FB4C8-9AEF-4A95-8EE4-AA111ADD5997} = {7C926FF8-EE87-41D7-9C79-705C74A8E7AC}
+		{1723EF1E-66D7-4A43-A5E4-DCF5E1DA3C7C} = {7C926FF8-EE87-41D7-9C79-705C74A8E7AC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {83EB3E68-DA05-4269-B585-FC49FE124614}
