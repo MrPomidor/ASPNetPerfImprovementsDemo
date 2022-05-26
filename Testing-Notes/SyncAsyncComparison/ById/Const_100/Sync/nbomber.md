@@ -2,20 +2,20 @@
 
 > test name: `nbomber_default_test_name`
 
-> scenario: `Orders by Id`, duration: `00:03:00`, ok count: `1441163`, fail count: `0`, all data: `0` MB MB
+> scenario: `Orders by Id`, duration: `00:03:00`, ok count: `1372179`, fail count: `0`, all data: `0` MB MB
 
 load simulation: `keep_constant`, copies: `100`, during: `00:03:00`
 |step|ok stats|
 |---|---|
 |name|`getOrder`|
-|request count|all = `1441163`, ok = `1441163`, RPS = `8006,5`|
-|latency|min = `1,85`, mean = `12,48`, max = `187,51`, StdDev = `3,16`|
-|latency percentile|50% = `12,34`, 75% = `13,71`, 95% = `17,2`, 99% = `20,91`|
+|request count|all = `1372179`, ok = `1372179`, RPS = `7623,2`|
+|latency|min = `2,16`, mean = `13,1`, max = `274,96`, StdDev = `3,73`|
+|latency percentile|50% = `12,91`, 75% = `14,36`, 95% = `17,89`, 99% = `21,65`|
 > status codes for scenario: `Orders by Id`
 
 |status code|count|message|
 |---|---|---|
-|200|1441163||
+|200|1372179||
 
 > hints:
 

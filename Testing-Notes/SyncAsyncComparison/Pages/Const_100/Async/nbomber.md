@@ -2,28 +2,28 @@
 
 > test name: `nbomber_default_test_name`
 
-> scenario: `Orders page`, duration: `00:03:00`, ok count: `105554`, fail count: `20`, all data: `0` MB MB
+> scenario: `Orders page`, duration: `00:03:00`, ok count: `102372`, fail count: `125`, all data: `0` MB MB
 
 load simulation: `keep_constant`, copies: `100`, during: `00:03:00`
 |step|ok stats|
 |---|---|
 |name|`getOrdersPage`|
-|request count|all = `105574`, ok = `105554`, RPS = `586,4`|
-|latency|min = `7,92`, mean = `170,18`, max = `1009,21`, StdDev = `161,54`|
-|latency percentile|50% = `120,38`, 75% = `147,71`, 95% = `574,46`, 99% = `840,7`|
+|request count|all = `102497`, ok = `102372`, RPS = `568,7`|
+|latency|min = `7,18`, mean = `174,41`, max = `1009,98`, StdDev = `164,42`|
+|latency percentile|50% = `123,84`, 75% = `151,94`, 95% = `587,78`, 99% = `855,55`|
 
 |step|fail stats|
 |---|---|
 |name|`getOrdersPage`|
-|request count|all = `105574`, fail = `20`, RPS = `0,1`|
-|latency|min = `999,25`, mean = `1006,82`, max = `1015`, StdDev = `5,26`|
-|latency percentile|50% = `1004,54`, 75% = `1012,74`, 95% = `1014,78`, 99% = `1015,3`|
+|request count|all = `102497`, fail = `125`, RPS = `0,7`|
+|latency|min = `999,72`, mean = `1007,64`, max = `1028,91`, StdDev = `5,26`|
+|latency percentile|50% = `1007,62`, 75% = `1011,71`, 95% = `1014,78`, 99% = `1023,49`|
 > status codes for scenario: `Orders page`
 
 |status code|count|message|
 |---|---|---|
-|200|105554||
-|-100|20|step timeout|
+|200|102372||
+|-100|125|step timeout|
 
 > hints:
 
