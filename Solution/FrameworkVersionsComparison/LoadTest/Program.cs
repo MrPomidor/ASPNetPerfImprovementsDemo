@@ -8,7 +8,6 @@ const string baseUrl = "https://localhost:44327/customer";
 
 using var httpClient = new HttpClient();
 
-// TODO move to some common code
 var orderPageNumbersFeed = await GetOrdersPageNumberFeed(httpClient);
 var productPageNumbersFeed = await GetProductsPageNumberFeed(httpClient);
 
@@ -67,7 +66,7 @@ async Task<IFeed<int>> GetPageNumberFeed(HttpClient client, string countRoute, s
 
     var totalAmount = int.Parse(await countResponse.Content.ReadAsStringAsync());
     var pages = totalAmount / pageSize;
-    pages = pages == (totalAmount * pageSize) ? pages : pages + 1; // TODO do a better way to distinguish if number have the rest
+    pages = pages == (totalAmount * pageSize) ? pages : pages + 1;
     var pageNumbers = Enumerable.Range(1, pages);
     return Feed.CreateCircular(feedName, pageNumbers);
 }
